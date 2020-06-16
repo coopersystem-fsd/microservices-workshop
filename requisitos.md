@@ -2,9 +2,9 @@
 
 Este Documento é composto de dois módulos:
 
-[Requisitos Funcionais](##requisitos-funcionais)  e [Requisitos não funcionais](##requisitos-não-funcionais)
+[Requisitos Funcionais](#requisitos-funcionais)  e [Requisitos não funcionais](#requisitos-não-funcionais)
 
-## Requisitos Funcionais
+# Requisitos Funcionais
 
 ### Cliente
 
@@ -68,7 +68,7 @@ Este Documento é composto de dois módulos:
 - Atualização de dados
 - Excluir conta (Lógica)
 
-## Requisitos não Funcionais
+# Requisitos não Funcionais
 
 1. Disponibilidade 24/07
 2. Documentação de API
