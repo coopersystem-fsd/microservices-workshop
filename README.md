@@ -7,11 +7,11 @@ Como Requisitos deveremos ter tudo bem documentado, mais automatizado possível.
 
 Serão 5 squads com 3 pessoas cada. Cada um irá definir sua tecnologia e como abordar para criar o serviço.
 
-** Abaixo segue o escopo de serviços:  **
+### Abaixo segue o escopo de serviços:
 
 ![Serviços](https://github.com/coopersystem-fsd/microservices-workshop/blob/master/Files/hardHungry.jpg?raw=true "Serviços")
 
-** Requisitos minímos **
+### Requisitos minímos
 
 1. Cada time deve escolher suas tecnologias
 2. Todos os serviços devem conter dockerfile e docker-compose
