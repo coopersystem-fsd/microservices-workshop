@@ -10,5 +10,3 @@ Serão 5 squads com 3 pessoas cada. Cada um irá definir sua tecnologia e como a
 **Abaixo segue o escopo de serviços: **
 
 ![Serviços](https://github.com/coopersystem-fsd/microservices-workshop/blob/master/Files/hardHungry.jpg?raw=true "Serviços")
-
-**Apresentações:**
