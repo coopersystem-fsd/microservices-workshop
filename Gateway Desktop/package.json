@@ -1,0 +1,26 @@
+{
+  "name": "gateway-user",
+  "version": "1.0.0",
+  "description": "Workshop de microserviços realizados no dia 15/06/2020 até 19/06/2020",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopersystem-fsd/microservices-workshop.git"
+  },
+  "author": "Camilo Fernandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coopersystem-fsd/microservices-workshop/issues"
+  },
+  "homepage": "https://github.com/coopersystem-fsd/microservices-workshop#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.0",
+    "url-status-code": "^2.0.0"
+  }
+}
