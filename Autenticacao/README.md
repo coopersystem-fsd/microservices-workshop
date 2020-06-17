@@ -39,7 +39,7 @@ Verb: /POST
 Host: localhost:3000
 Route: /auth/login
 Access: Public
-Parameters: { 'email': 'viniciusfesil@gmail.com', 'password': 'letItGo!' }
+Parameters: { 'username': 'vinnyfs89', 'password': 'letItGo!' }
 ```
 
 - Profile
@@ -66,8 +66,8 @@ Access: Restrict
     - [x] Validate own token
     - [ ] Refresh own token
     - [ ] Destruct own token
-  - [ ] Shows available routes
-  - [ ] Consume authentication from Account module
+  - [x] Shows available routes
+  - [ ] Consume Account service module
 
 ## References
 
