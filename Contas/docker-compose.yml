@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   api:
-    container_name: authentication-api
+    container_name: account-api
     build:
       context: ./api
       dockerfile: Dockerfile
@@ -12,10 +12,10 @@ services:
     environment:
       PORT: 3000
     networks:
-      - authentication-network
+      - account-network
 
   database:
-    container_name: authentication-database
+    container_name: account-database
     image: mongo:4.2.7
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
@@ -25,8 +25,8 @@ services:
     volumes:
       - ./database:/data/db
     networks:
-      - authentication-network
+      - account-network
 
 networks:
-  authentication-network:
+  account-network:
     driver: bridge
