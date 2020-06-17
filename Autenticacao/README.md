@@ -5,7 +5,6 @@ API using Jest(NodeJS) to Authenticate User.
 This module uses the technologies below:
 
 - Docker
-- MongoDB
 - NodeJS
 
 ## Requirements
@@ -30,4 +29,38 @@ docker-compose up -d
 ## Provides
 
 - [API](./api)
-- Database
+
+## Tasks
+
+- [x] Structural
+  - [x] Discuss about module **Authentication**
+  - [x] Create Dockerfile for **API**
+  - [x] Create DockerCompose for Authentication Module
+    - [x] Node version 14.4.0
+  - [x] Create Authentication Folder
+- [ ] Features
+  - [ ] Authentication token
+    - [ ] Create
+    - [ ] Validate own token
+    - [ ] Refresh own token
+    - [ ] Destruct own token
+  - [ ] Create a mock authentication
+  - [ ] Shows available routes
+  - [ ] Consume authentication from Account module
+
+## References
+
+- Team
+
+  - Gabriel
+  - Vinicius
+  - Warlisson
+
+- Co-authoreds:
+
+```sh
+Co-authored-by: Warlisson Lima <warllisonlima@gmail.com>
+Co-authored-by: Gabriel Dalla Costa <gibrel@gmail.com>
+```
+
+- [Repositório](https://github.com/coopersystem-fsd/microservices-workshop)
