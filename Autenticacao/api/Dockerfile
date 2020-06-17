@@ -4,9 +4,9 @@ WORKDIR /dependency
 
 COPY package.json .
 
+RUN npm install -g yarn
 RUN npm install
 RUN npm i -g @nestjs/cli
-
 
 FROM node:14.4.0
 

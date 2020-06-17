@@ -14,19 +14,6 @@ services:
     networks:
       - authentication-network
 
-  database:
-    container_name: authentication-database
-    image: mongo:4.2.7
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: C0op3r#2020
-    ports:
-      - '27017:27017'
-    volumes:
-      - ./database:/data/db
-    networks:
-      - authentication-network
-
 networks:
   authentication-network:
     driver: bridge
