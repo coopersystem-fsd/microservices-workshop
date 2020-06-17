@@ -1,8 +1,8 @@
-# Auth Module
+# API
 
 ## Description
 
-Authenticate User.
+Grants api to authenticate user
 
 ## Config
 
