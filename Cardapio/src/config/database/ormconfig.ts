@@ -2,10 +2,13 @@
 import * as dotenv from 'dotenv';
 import { ConnectionOptions } from 'typeorm';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
+import {resolve} from 'path';
 
-const env = dotenv.parse('../../');
+const dir = resolve(__dirname, '..','..', '..');
+console.log(dir);
+const env = dotenv.parse(dir);
+console.log(__dirname)
 dotenv.config(env);
-
 const config: ConnectionOptions = {
   type: 'postgres',
   host: process.env.DB_HOST,
@@ -14,8 +17,8 @@ const config: ConnectionOptions = {
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   namingStrategy: new SnakeNamingStrategy(),
-  entities: ['dist/config/database/entities/*.entity{.ts,.js}'],
-  migrations: ['dist/config/database/migrations/*.js'],
+  entities: ['dist/database/entities/*.entity{.ts,.js}'],
+  migrations: ['dist/database/migrations/*.js'],
   cli: {
     entitiesDir: 'src/database/entities',
     migrationsDir: 'src/database/migrations',
