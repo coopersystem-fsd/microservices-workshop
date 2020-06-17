@@ -30,6 +30,27 @@ docker-compose up -d
 
 - [API](./api)
 
+## Endpoints
+
+- Login
+
+```yaml
+Verb: /POST
+Host: localhost:3000
+Route: /auth/login
+Access: Public
+Parameters: { 'email': 'viniciusfesil@gmail.com', 'password': 'letItGo!' }
+```
+
+- Profile
+
+```yaml
+Verb: /GET
+Host: localhost:3000
+Route: /profile
+Access: Restrict
+```
+
 ## Tasks
 
 - [x] Structural
@@ -40,11 +61,11 @@ docker-compose up -d
   - [x] Create Authentication Folder
 - [ ] Features
   - [ ] Authentication token
-    - [ ] Create
-    - [ ] Validate own token
+    - [x] Create users to authentication
+    - [x] Create
+    - [x] Validate own token
     - [ ] Refresh own token
     - [ ] Destruct own token
-  - [ ] Create a mock authentication
   - [ ] Shows available routes
   - [ ] Consume authentication from Account module
 

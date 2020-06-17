@@ -15,20 +15,20 @@ docker build -t auth-image .
 ## Installation
 
 ```bash
-npm install
+yarn install
 ```
 
 ## Running the app
 
 ```bash
-npm run start
+yarn start
 ```
 
 ## License
 
 Nest is [MIT licensed](LICENSE).
 
-## Referências
+## References
 
 - [NestJS](https://docs.nestjs.com)
 - [GitMoji](https://gitmoji.carloscuesta.me)

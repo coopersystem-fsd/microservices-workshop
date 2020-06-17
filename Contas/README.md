@@ -33,16 +33,14 @@ docker-compose up -d
 - Database
 
 ```yaml
-User
-  email: string
-  name: string
-  password: string(password)
-  enabled: 1|0 -- Ativo|Inativo
-  foto: {
-    id: number
-    usuario_id: number
-    arquivo: string (Base64)
-  }
+[ User ]
+email: string
+name: string
+password: string
+enabled: boolean
+profile: {
+  picture: string // (Base64)
+}
 ```
 
 ## Tasks
