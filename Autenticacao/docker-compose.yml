@@ -7,8 +7,8 @@ services:
       context: ./api
       dockerfile: Dockerfile
     volumes:
-      - './api:/src/app'
-    command: npm run start
+      - './api:/usr/src/app'
+    command: yarn start
     environment:
       PORT: 3000
     ports:
