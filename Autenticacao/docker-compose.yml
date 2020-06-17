@@ -1,0 +1,32 @@
+version: '3.5'
+
+services:
+  api:
+    container_name: authentication-api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    volumes:
+      - './api:/src/app'
+    command: npm run start
+    environment:
+      PORT: 3000
+    networks:
+      - authentication-network
+
+  database:
+    container_name: authentication-database
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: C0op3r#2020
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./database:/data/db
+    networks:
+      - authentication-network
+
+networks:
+  authentication-network:
+    driver: bridge
