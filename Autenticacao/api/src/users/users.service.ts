@@ -6,13 +6,12 @@ export type User = any;
 
 @Injectable()
 export class UsersService {
-  private readonly usersMock: User[];
-  // private readonly usersMock: Account[];
+  // private readonly usersMock: User[];
+  private readonly usersMock: Account[];
 
   constructor() {
     this.usersMock = [
       {
-        userId: 1,
         username: 'vinnyfs89',
         email: 'viniciusfesil@gmail.com',
         name: 'test3',
@@ -20,7 +19,6 @@ export class UsersService {
         enabled: true,
       },
       {
-        userId: 2,
         username: 'luk1',
         email: 'lucas.mendes@coopersystem.com.br',
         name: 'Lucas Mendes',
@@ -28,7 +26,6 @@ export class UsersService {
         enabled: false,
       },
       {
-        userId: 3,
         username: 'kmila1',
         email: 'camiloanalista@gmail.com',
         name: 'Camilo Matheus',
