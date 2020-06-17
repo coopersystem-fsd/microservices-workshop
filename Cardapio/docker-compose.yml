@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  nest-api:
+    build: .
+    container_name: nest-api
+    environment:
+      - DB_HOST=postgres
+    volumes:
+      - .:/home/node/nestapi
+      - /home/node/nestapi/node_modules
+    ports:
+      - ${PORT}:${PORT}
+    depends_on:
+      - postgres
+    command: >
+      sh -c "npm run typeorm:migrate &&
+              npm run start:prod"
+    networks:
+      - nestwork
+  postgres:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - nestwork
+networks:
+  nestwork:
+    driver: bridge
