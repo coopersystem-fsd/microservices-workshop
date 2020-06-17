@@ -1,6 +1,8 @@
-import {Column, Entity, PrimaryGeneratedColumn, ManyToOne} from 'typeorm'
+import {Column, Entity, PrimaryGeneratedColumn, ManyToOne, OneToMany, ManyToMany, JoinTable} from 'typeorm'
 import { PlateType } from './PlateType.entity';
 import { Cooking } from './Cooking.entity';
+import { Avaliation } from './Avaliation.entity';
+import { Ingredients } from './Ingredient.entity';
 
 @Entity('plates')
 export class Plate {
@@ -27,8 +29,12 @@ export class Plate {
   discount: number;
 
   @ManyToOne(() => PlateType, (plateType) => plateType.plates)
-  plateType: PlateType
+  plateType: PlateType;
 
   @ManyToOne(() => Cooking, (cooking) => cooking.plates)
-  cooking: Cooking[]
+  cooking: Cooking;
+
+  @OneToMany(() => Avaliation, (avaliation) => avaliation.plate)
+  avaliation: Avaliation[]
+
 }
