@@ -13,9 +13,22 @@ import * as config from './config/database/ormconfig';
 import { AuthMiddleware } from './core/middlewares/auth.middleware';
 import { PlatesModule } from './modules/plates/plates.module';
 import { PlatesController } from './modules/plates/plates.controller';
+import { PlatesTypeModule } from './modules/plates-type/plates-type.module';
+import { CookingModule } from './modules/cooking/cooking.module';
+import { AvaliationModule } from './modules/avaliation/avaliation.module';
+
+import { IngredientModule } from './modules/ingredient/ingredient.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(config), HttpModule, PlatesModule],
+  imports: [
+    TypeOrmModule.forRoot(config),
+    HttpModule,
+    PlatesModule,
+    PlatesTypeModule,
+    CookingModule,
+    AvaliationModule,
+    IngredientModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
