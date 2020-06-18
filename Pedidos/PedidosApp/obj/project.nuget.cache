@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "3R7DffWOMUFEOpgrIIJsUhA8A9vCOsyRrWN4eFLerEZx3aEMSWCPOcVhWL2igKWN2Ooj9QhEBklH3c0wT7O10g==",
+  "success": true,
+  "projectFilePath": "/home/silas/workspace/cSharp/microservices-workshop/Pedidos/PedidosApp/Pedidos.csproj",
+  "expectedPackageFiles": [
+    "/home/silas/.nuget/packages/carter/5.1.0/carter.5.1.0.nupkg.sha512",
+    "/home/silas/.nuget/packages/fluentvalidation/8.5.1/fluentvalidation.8.5.1.nupkg.sha512",
+    "/home/silas/.nuget/packages/microsoft.extensions.dependencymodel/3.1.0/microsoft.extensions.dependencymodel.3.1.0.nupkg.sha512",
+    "/home/silas/.nuget/packages/microsoft.openapi/1.1.4/microsoft.openapi.1.1.4.nupkg.sha512",
+    "/home/silas/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/home/silas/.nuget/packages/system.componentmodel.annotations/4.4.1/system.componentmodel.annotations.4.4.1.nupkg.sha512",
+    "/home/silas/.nuget/packages/system.text.json/4.7.0/system.text.json.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
