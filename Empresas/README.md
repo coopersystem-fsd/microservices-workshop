@@ -1,4 +1,4 @@
-###Docker
+### Docker
 
 > docker-compose up
 
@@ -8,7 +8,7 @@ ou
  
 Criar um banco chamado empresa
 
-##Rotas
+## Rotas
 ``` 
 POST   [/empresa]
 PUT    [/empresa/{empresa}]
