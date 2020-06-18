@@ -13,6 +13,7 @@ services:
     ports:
       - "1433:1433"
 
+
   service-backend-server:
     image: tomcat
     user: root
@@ -26,10 +27,20 @@ services:
     #ports:
     #  - "8080:8080"
     network_mode: "host"
+    environment:
+      URL_BANCO: service-backend-database
+      GATEWAY_URL: http://gateway-user-nginx
+    networks:
+      - default
+      - gateway
 
 networks:
   default:
+    name: empresas-network
     driver: bridge
-    ipam:
-      config:
-        - subnet: 172.16.57.0/24
+    #ipam:
+    #  config:
+    #    - subnet: 172.16.57.0/24
+  gateway:
+    external:
+      name: food_gatework_network
