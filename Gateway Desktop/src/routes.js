@@ -5,7 +5,7 @@ var urlStatusCode = require('url-status-code');
 const router = express.Router();
 
 const servers = [
-    {uri: 'https://coopersystem.com.br', 'resource': '/coopersystem', name: 'PortalCoopersystem'},
+    {uri: process.env.AUTH, 'resource': '/auth', name: 'Autenticação'},
     {uri: 'http://www.lucasfreitas.com.br', 'resource': '/', name: 'PortalLucas'}
 ];
 
