@@ -21,6 +21,12 @@ export class Cooking {
   @Column()
   description: string;
 
+  @ApiProperty({
+    name: 'plate_id',
+  })
+  @Column()
+  plateId: number;
+
   @OneToMany(
     () => Plate,
     plate => plate.plateType,
