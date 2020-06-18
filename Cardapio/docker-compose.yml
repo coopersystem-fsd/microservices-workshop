@@ -6,11 +6,14 @@ services:
     container_name: nest-api
     environment:
       - DB_HOST=postgres
+      - GATEWAY_API=http://gateway_cotainer_nginx
     volumes:
       - .:/home/node/nestapi
       - /home/node/nestapi/node_modules
     ports:
       - ${PORT}:${PORT}
+    networks:
+      - gateway
     depends_on:
       - postgres
     command: >
@@ -30,3 +33,6 @@ services:
 networks:
   nestwork:
     driver: bridge
+  gateway:
+    external:
+      name: gateway_network
