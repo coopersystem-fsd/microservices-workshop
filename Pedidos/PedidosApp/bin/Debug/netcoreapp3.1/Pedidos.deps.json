@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "Pedidos/1.0.0": {
         "dependencies": {
-          "Carter": "5.1.0"
+          "Carter": "5.1.0",
+          "Npgsql": "4.1.3.1"
         },
         "runtime": {
           "Pedidos.dll": {}
@@ -66,7 +67,19 @@
           }
         }
       },
+      "Npgsql/4.1.3.1": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Npgsql.dll": {
+            "assemblyVersion": "4.1.3.1",
+            "fileVersion": "4.1.3.1"
+          }
+        }
+      },
       "System.ComponentModel.Annotations/4.4.1": {},
+      "System.Runtime.CompilerServices.Unsafe/4.6.0": {},
       "System.Text.Json/4.7.0": {
         "runtime": {
           "lib/netcoreapp3.0/System.Text.Json.dll": {
@@ -118,12 +131,26 @@
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
+    "Npgsql/4.1.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-354pl/Picmt5/AIrm8urFwtxfK4n4NbmfBnLA9yvP8VtILSQF3/sFo3+lGuz+q4iyD18QeNFy0NMNBzsocFVlw==",
+      "path": "npgsql/4.1.3.1",
+      "hashPath": "npgsql.4.1.3.1.nupkg.sha512"
+    },
     "System.ComponentModel.Annotations/4.4.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
       "path": "system.componentmodel.annotations/4.4.1",
       "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
+      "path": "system.runtime.compilerservices.unsafe/4.6.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
     },
     "System.Text.Json/4.7.0": {
       "type": "package",

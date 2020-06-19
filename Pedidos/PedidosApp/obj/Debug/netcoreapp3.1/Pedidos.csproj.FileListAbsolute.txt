@@ -18,3 +18,4 @@
 /home/silas/workspace/cSharp/microservices-workshop/Pedidos/PedidosApp/obj/Debug/netcoreapp3.1/Pedidos.dll
 /home/silas/workspace/cSharp/microservices-workshop/Pedidos/PedidosApp/obj/Debug/netcoreapp3.1/Pedidos.pdb
 /home/silas/workspace/cSharp/microservices-workshop/Pedidos/PedidosApp/obj/Debug/netcoreapp3.1/Pedidos.genruntimeconfig.cache
+/home/silas/workspace/cSharp/microservices-workshop/Pedidos/PedidosApp/bin/Debug/netcoreapp3.1/Npgsql.dll
