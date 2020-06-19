@@ -7,11 +7,14 @@ services:
         build:
             context: ./
             dockerfile: Dockerfile
+        networks: 
+            - autenticacao
         volumes: 
             - "./src:/src/app"
         command: npm run start
         environment: 
             PORT: 3000
+            AUTH: http://authentication-api
     
     nginx:
         container_name: gateway-user-nginx
@@ -23,3 +26,12 @@ services:
             - /www/public
         links:
             - web
+
+networks: 
+
+    food-bridge:
+        name: food_gatework_network
+        driver: bridge
+    autenticacao:
+        external:
+            name: authentication-network

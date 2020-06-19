@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  api:
+    container_name: authentication-api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    volumes:
+      - './api:/usr/src/app'
+    command: yarn start
+    environment:
+      PORT: 3000
+    ports:
+      - '3000:3000'
+    networks:
+      - authentication-network
+
+networks:
+  authentication-network:
+    driver: bridge
