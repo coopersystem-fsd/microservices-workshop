@@ -38,6 +38,60 @@
                     await res.WriteAsync(jsonString);
                 }
             });
+
+            Get("/formas_pagamento", async(req, res) => {
+                
+                await using var conn = new NpgsqlConnection(connString);
+                await conn.OpenAsync();
+
+                List<Object> forma_pagamento = new List<Object>();
+    
+                await using (var cmd = new NpgsqlCommand("SELECT * FROM forma_pagamento_pedidos", conn))
+                await using (var reader = await cmd.ExecuteReaderAsync()) {
+                    
+                    while (await reader.ReadAsync()) {
+                        forma_pagamento.Add(new { 
+                            forma_pagamento = reader.GetString(0),
+                            descricao = reader.GetString(1) 
+                        });
+                    }
+
+                    string jsonString;
+                    jsonString = JsonSerializer.Serialize(forma_pagamento);
+
+                    await res.WriteAsync(jsonString);
+                }
+            });
+
+
+            Get("/pedidos/{cpf:string}", async(req, res) => {
+                
+                await using var conn = new NpgsqlConnection(connString);
+                await conn.OpenAsync();
+
+                List<Object> pedidos = new List<Object>();
+
+                string pCpf = req.RouteValues["cpf"].ToString();
+
+                string Pesquisa = "SELECT * FROM pedidos where cliente = " + "'" +pCpf + "'";
+    
+                await using (var cmd = new NpgsqlCommand(Pesquisa, conn))
+                await using (var reader = await cmd.ExecuteReaderAsync()) {
+                    
+                    while (await reader.ReadAsync()) {
+                        pedidos.Add(new { 
+                            forma_pagamento = reader.GetString(0),
+                            descricao = reader.GetString(1) 
+                        });
+                    }
+
+                    string jsonString;
+                    jsonString = JsonSerializer.Serialize(pedidos);
+
+                    await res.WriteAsync(jsonString);
+                }
+            });
+
         }
     }
 }
