@@ -8,8 +8,8 @@ Rode `docker-compose up --build -d` dentro da pasta do projeto
 
 A aplicação está disponível também em ambiente heroku https://company-food.herokuapp.com/
 
-####Mantido por
+### Mantido por
 
-* @DotAmzi
+* [@DotAmzi](https://github.com/DotAmzi)
 
-* @Wuerta
+* [@Wuerta](https://github.com/Wuerta)
