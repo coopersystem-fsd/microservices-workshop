@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-glibc:alpine-3.11_glibc-2.31
 
-ENV DENO_VERSION=1.1.1
+ENV DENO_VERSION=1.0.0
 
 ARG PORT=3000
 
