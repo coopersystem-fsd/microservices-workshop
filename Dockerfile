@@ -2,9 +2,9 @@ FROM frolvlad/alpine-glibc:alpine-3.11_glibc-2.31
 
 ENV DENO_VERSION=1.1.1
 
-ARG PORT_APPLICATION=3000
+ARG PORT=3000
 
-ENV PORT_APPLICATION=$PORT_APPLICATION
+ENV PORT=$PORT
 
 RUN apk update && \
     apk upgrade && \
