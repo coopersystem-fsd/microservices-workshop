@@ -1,0 +1,42 @@
+version: '3.5'
+
+services:
+
+  web:
+    container_name: conta-food-go
+    working_dir: /usr/src/app
+    environment:
+      MONGODB_URL: mongo
+      MONGODB_USER: root
+      MONGODB_PASS: password
+    build:
+      args:
+        PORT: 8080
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ".:/usr/src/app"
+    command: bash -c "go run ."
+    networks:
+      - conta-food-network
+    links:
+      - mongo
+
+  mongo:
+    image: mariadb
+    container_name: conta-food-mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: user
+    ports:
+      - "3306:3306"
+    volumes:
+      - /data/db
+    networks:
+      - conta-food-network
+
+networks:
+  conta-food-network:
+    driver: bridge
