@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+
+  web:
+    container_name: empresa-food-deno
+    working_dir: /usr/src/app
+    build:
+      args:
+        PORT_APPLICATION: 3000
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./:/src/app"
+    command: bash -c "deno run --allow-net --allow-env --allow-read index.ts"
