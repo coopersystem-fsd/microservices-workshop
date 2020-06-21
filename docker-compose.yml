@@ -33,7 +33,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /data/db
+      - /var/lib/mysql
     networks:
       - conta-food-network
 
