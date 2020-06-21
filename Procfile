@@ -1,1 +1,1 @@
-web: deno run --allow-run --allow-net --allow-env --allow-read src/index.ts
+web: deno run --allow-run --allow-net --allow-env --allow-read  --config ./tsconfig.app.json src/index.ts
